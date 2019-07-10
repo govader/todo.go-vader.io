@@ -24,7 +24,7 @@ type Store interface {
 // TaskQuerier is a handy way to count and query at the same time
 type TaskQuerier interface {
 	// Count returns the number of row related to the query
-	Count(int, error)
+	Count() (int, error)
 
 	// List returns a list of element from the index with a limited number of element
 	List(from, limit int) ([]Task, error)
